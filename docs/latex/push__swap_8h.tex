@@ -1,0 +1,94 @@
+\doxysection{includes/push\+\_\+swap.h File Reference}
+\hypertarget{push__swap_8h}{}\label{push__swap_8h}\index{includes/push\_swap.h@{includes/push\_swap.h}}
+
+
+Push Swap Header.  
+
+
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$limits.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include "{}../libft/libft.\+h"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structs__stack}{s\+\_\+stack}}
+\begin{DoxyCompactList}\small\item\em Struct of the Stacks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__mandatory_gae420caa0af9cbdf102ed255034e27c5b}{BOTTOM}}~0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structs__stack}{s\+\_\+stack}} \mbox{\hyperlink{group__mandatory_ga34d35a166e1de42c26184c0f5b63b66e}{t\+\_\+stack}}
+\begin{DoxyCompactList}\small\item\em Struct of the Stacks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__mandatory_gade01093c7a65184dd2e56cae7c97d076}{sa}} (\mbox{\hyperlink{group__mandatory_ga34d35a166e1de42c26184c0f5b63b66e}{t\+\_\+stack}} \texorpdfstring{$\ast$}{*}a, bool print\+\_\+inst)
+\begin{DoxyCompactList}\small\item\em Swap the 2 top elements of stack a. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mandatory_ga664fd90768e3f1cb86d159e6c92eb293}{sb}} (\mbox{\hyperlink{group__mandatory_ga34d35a166e1de42c26184c0f5b63b66e}{t\+\_\+stack}} \texorpdfstring{$\ast$}{*}b, bool print\+\_\+inst)
+\begin{DoxyCompactList}\small\item\em Swap the 2 top elements of stack b. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mandatory_gac0b8502f931dd87f25bf8b9035a9f097}{ss}} (\mbox{\hyperlink{group__mandatory_ga34d35a166e1de42c26184c0f5b63b66e}{t\+\_\+stack}} \texorpdfstring{$\ast$}{*}a, \mbox{\hyperlink{group__mandatory_ga34d35a166e1de42c26184c0f5b63b66e}{t\+\_\+stack}} \texorpdfstring{$\ast$}{*}b)
+\begin{DoxyCompactList}\small\item\em Both sa and sb. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mandatory_ga6c78fd754f187285e8697abd679c51be}{pa}} (\mbox{\hyperlink{group__mandatory_ga34d35a166e1de42c26184c0f5b63b66e}{t\+\_\+stack}} \texorpdfstring{$\ast$}{*}a, \mbox{\hyperlink{group__mandatory_ga34d35a166e1de42c26184c0f5b63b66e}{t\+\_\+stack}} \texorpdfstring{$\ast$}{*}b, bool print\+\_\+inst)
+\begin{DoxyCompactList}\small\item\em Moves the top element of stack b at the top of stack a. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mandatory_gad02515376d2ba4596ddde6cc410daec2}{pb}} (\mbox{\hyperlink{group__mandatory_ga34d35a166e1de42c26184c0f5b63b66e}{t\+\_\+stack}} \texorpdfstring{$\ast$}{*}a, \mbox{\hyperlink{group__mandatory_ga34d35a166e1de42c26184c0f5b63b66e}{t\+\_\+stack}} \texorpdfstring{$\ast$}{*}b, bool print\+\_\+inst)
+\begin{DoxyCompactList}\small\item\em Moves the top element of stack a at the top of stack b. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mandatory_gac81321bc36187a6953b397f7e8852de9}{ra}} (\mbox{\hyperlink{group__mandatory_ga34d35a166e1de42c26184c0f5b63b66e}{t\+\_\+stack}} \texorpdfstring{$\ast$}{*}a, bool print\+\_\+inst)
+\begin{DoxyCompactList}\small\item\em Shifts all elements of stack a from bottom to top. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mandatory_ga7b4a783e6434a524445e12cf68249cea}{rb}} (\mbox{\hyperlink{group__mandatory_ga34d35a166e1de42c26184c0f5b63b66e}{t\+\_\+stack}} \texorpdfstring{$\ast$}{*}b, bool print\+\_\+inst)
+\begin{DoxyCompactList}\small\item\em Shifts all elements of stack b from bottom to top. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mandatory_ga7faaed0c9f5581e649a695f8cca3467a}{rr}} (\mbox{\hyperlink{group__mandatory_ga34d35a166e1de42c26184c0f5b63b66e}{t\+\_\+stack}} \texorpdfstring{$\ast$}{*}a, \mbox{\hyperlink{group__mandatory_ga34d35a166e1de42c26184c0f5b63b66e}{t\+\_\+stack}} \texorpdfstring{$\ast$}{*}b)
+\begin{DoxyCompactList}\small\item\em Both ra and rb. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mandatory_ga558522c748e361a53391e4950417a9e6}{rra}} (\mbox{\hyperlink{group__mandatory_ga34d35a166e1de42c26184c0f5b63b66e}{t\+\_\+stack}} \texorpdfstring{$\ast$}{*}a, bool print\+\_\+inst)
+\begin{DoxyCompactList}\small\item\em Shifts all elements of stack a from top to bottom. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mandatory_ga297e8addc58846b9dc82e756418f28c7}{rrb}} (\mbox{\hyperlink{group__mandatory_ga34d35a166e1de42c26184c0f5b63b66e}{t\+\_\+stack}} \texorpdfstring{$\ast$}{*}b, bool print\+\_\+inst)
+\begin{DoxyCompactList}\small\item\em Shifts all elements of stack b from top to bottom. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mandatory_gab115f0986ac29fa94b89ce68b1fbbbb2}{rrr}} (\mbox{\hyperlink{group__mandatory_ga34d35a166e1de42c26184c0f5b63b66e}{t\+\_\+stack}} \texorpdfstring{$\ast$}{*}a, \mbox{\hyperlink{group__mandatory_ga34d35a166e1de42c26184c0f5b63b66e}{t\+\_\+stack}} \texorpdfstring{$\ast$}{*}b)
+\begin{DoxyCompactList}\small\item\em Both rra and rrb. \end{DoxyCompactList}\item 
+int \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__mandatory_ga79e8b706913b3f2501680fe62a12d5ab}{parse\+\_\+input}} (int argc, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv, \mbox{\hyperlink{group__mandatory_ga34d35a166e1de42c26184c0f5b63b66e}{t\+\_\+stack}} \texorpdfstring{$\ast$}{*}a)
+\begin{DoxyCompactList}\small\item\em Main function of parsing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mandatory_ga8194143a797be3cf6b6fc222373e470a}{fill\+\_\+a}} (\mbox{\hyperlink{group__mandatory_ga34d35a166e1de42c26184c0f5b63b66e}{t\+\_\+stack}} \texorpdfstring{$\ast$}{*}a, int \texorpdfstring{$\ast$}{*}int\+\_\+arr, int argc)
+\begin{DoxyCompactList}\small\item\em Fill the stack A. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__mandatory_gae18b6fbd4a0c0f9db518aecf0bccc71a}{is\+\_\+empty}} (\mbox{\hyperlink{group__mandatory_ga34d35a166e1de42c26184c0f5b63b66e}{t\+\_\+stack}} \texorpdfstring{$\ast$}{*}stack)
+\begin{DoxyCompactList}\small\item\em Checks if stack is empty. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__mandatory_gaa684449ba4672087b71fed4d62a85429}{is\+\_\+full}} (\mbox{\hyperlink{group__mandatory_ga34d35a166e1de42c26184c0f5b63b66e}{t\+\_\+stack}} \texorpdfstring{$\ast$}{*}stack)
+\begin{DoxyCompactList}\small\item\em Checks if stack is full. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__mandatory_ga2ec398c6eb6e7e0b934e79946be6d9b1}{is\+\_\+sorted}} (\mbox{\hyperlink{group__mandatory_ga34d35a166e1de42c26184c0f5b63b66e}{t\+\_\+stack}} \texorpdfstring{$\ast$}{*}a)
+\begin{DoxyCompactList}\small\item\em Checks if stack a is sorted. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mandatory_ga9207de5961b34e36f65d2be78a2f9069}{max}} (\mbox{\hyperlink{group__mandatory_ga34d35a166e1de42c26184c0f5b63b66e}{t\+\_\+stack}} \texorpdfstring{$\ast$}{*}stack)
+\begin{DoxyCompactList}\small\item\em Get the max value of the stack. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mandatory_gadc10cd88931142720e9afadece702690}{min}} (\mbox{\hyperlink{group__mandatory_ga34d35a166e1de42c26184c0f5b63b66e}{t\+\_\+stack}} \texorpdfstring{$\ast$}{*}stack)
+\begin{DoxyCompactList}\small\item\em Get the minimum value of stack. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mandatory_ga65f8fef1a830219adda1e1abfb1eba8d}{push}} (\mbox{\hyperlink{group__mandatory_ga34d35a166e1de42c26184c0f5b63b66e}{t\+\_\+stack}} \texorpdfstring{$\ast$}{*}stack, int value)
+\begin{DoxyCompactList}\small\item\em Push a value into a stack. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mandatory_ga5aed23db30e3cf0f572fdcfd428c9b24}{pop}} (\mbox{\hyperlink{group__mandatory_ga34d35a166e1de42c26184c0f5b63b66e}{t\+\_\+stack}} \texorpdfstring{$\ast$}{*}stack)
+\begin{DoxyCompactList}\small\item\em Removes a value from the top of the stack. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mandatory_ga55b9c207f15ed516bdb5485998570ec9}{free\+\_\+stacks}} (\mbox{\hyperlink{group__mandatory_ga34d35a166e1de42c26184c0f5b63b66e}{t\+\_\+stack}} \texorpdfstring{$\ast$}{*}a, \mbox{\hyperlink{group__mandatory_ga34d35a166e1de42c26184c0f5b63b66e}{t\+\_\+stack}} \texorpdfstring{$\ast$}{*}b)
+\begin{DoxyCompactList}\small\item\em Free both stacks. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mandatory_gae072b3adc48b94098b520238ed6ff3ef}{free\+\_\+argv}} (char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv)
+\begin{DoxyCompactList}\small\item\em Free args. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mandatory_ga14585a9864a7bf24a6e3fd2a28d7a452}{dead}} (\mbox{\hyperlink{group__mandatory_ga34d35a166e1de42c26184c0f5b63b66e}{t\+\_\+stack}} \texorpdfstring{$\ast$}{*}a, \mbox{\hyperlink{group__mandatory_ga34d35a166e1de42c26184c0f5b63b66e}{t\+\_\+stack}} \texorpdfstring{$\ast$}{*}b)
+\begin{DoxyCompactList}\small\item\em Function to exit the program in case of error. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__mandatory_ga11d5512880f90f8151a500e47a442ebd}{handle\+\_\+argv}} (char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv, int argc)
+\begin{DoxyCompactList}\small\item\em Handles the new arguments. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mandatory_gad0a8c0c8175c11d8ac1b7683f8c3bc97}{func\+\_\+num\+\_\+elem}} (char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv)
+\begin{DoxyCompactList}\small\item\em Counts the number of arguments. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mandatory_gaf6964b64c6c92595447863aca821921d}{specific}} (\mbox{\hyperlink{group__mandatory_ga34d35a166e1de42c26184c0f5b63b66e}{t\+\_\+stack}} \texorpdfstring{$\ast$}{*}a, \mbox{\hyperlink{group__mandatory_ga34d35a166e1de42c26184c0f5b63b66e}{t\+\_\+stack}} \texorpdfstring{$\ast$}{*}b)
+\begin{DoxyCompactList}\small\item\em Checks stack size and follows up to specific function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mandatory_ga2e25532d2789533034152e1004bad254}{insertion\+\_\+sort}} (int \texorpdfstring{$\ast$}{*}storage, int chunk\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Insert Sort Algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mandatory_ga2bd620f02937a0db4efe5a0eab470fde}{radix\+\_\+sort}} (\mbox{\hyperlink{group__mandatory_ga34d35a166e1de42c26184c0f5b63b66e}{t\+\_\+stack}} \texorpdfstring{$\ast$}{*}a, \mbox{\hyperlink{group__mandatory_ga34d35a166e1de42c26184c0f5b63b66e}{t\+\_\+stack}} \texorpdfstring{$\ast$}{*}b)
+\begin{DoxyCompactList}\small\item\em Radix Sort. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Push Swap Header. 
+

@@ -1,0 +1,89 @@
+\doxysection{push\+\_\+swap.\+h}
+\hypertarget{push__swap_8h_source}{}\label{push__swap_8h_source}\index{includes/push\_swap.h@{includes/push\_swap.h}}
+\mbox{\hyperlink{push__swap_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*\ **************************************************************************\ */}}
+\DoxyCodeLine{00002\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00003\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :::\ \ \ \ \ \ ::::::::\ \ \ */}}
+\DoxyCodeLine{00004\ \textcolor{comment}{/*\ \ \ push\_swap.h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :+:\ \ \ \ \ \ :+:\ \ \ \ :+:\ \ \ */}}
+\DoxyCodeLine{00005\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ +:+\ +:+\ \ \ \ \ \ \ \ \ +:+\ \ \ \ \ */}}
+\DoxyCodeLine{00006\ \textcolor{comment}{/*\ \ \ By:\ gude-\/jes\ <gude-\/jes@student.42porto.com>\ \ \ \ +\#+\ \ +:+\ \ \ \ \ \ \ +\#+\ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00007\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ +\#+\#+\#+\#+\#+\ \ \ +\#+\ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00008\ \textcolor{comment}{/*\ \ \ Created:\ 2024/05/06\ 08:45:53\ by\ gude-\/jes\ \ \ \ \ \ \ \ \ \ \#+\#\ \ \ \ \#+\#\ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00009\ \textcolor{comment}{/*\ \ \ Updated:\ 2024/10/21\ 12:34:07\ by\ gude-\/jes\ \ \ \ \ \ \ \ \ \#\#\#\ \ \ \#\#\#\#\#\#\#\#.fr\ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00010\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00011\ \textcolor{comment}{/*\ **************************************************************************\ */}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#ifndef\ PUSH\_SWAP\_H}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#\ define\ PUSH\_SWAP\_H}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#\ include\ <unistd.h>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#\ include\ <stdlib.h>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#\ include\ <stdbool.h>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#\ include\ <stdarg.h>}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#\ include\ <stdio.h>}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#\ include\ <limits.h>}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#\ include\ <fcntl.h>}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#\ include\ "{}\mbox{\hyperlink{libft_8h}{../libft/libft.h}}"{}}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structs__stack}{s\_stack}}}
+\DoxyCodeLine{00039\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structs__stack_a8b111ae0b94ef9b811a1f56c5794e056}{stack\_size}};}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{int}\ *\mbox{\hyperlink{structs__stack_a9a1c2e5cbaaeb6d9cfe1290c3144896f}{storage}};}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structs__stack_a4e9ae253edb2669547db815fec247fe7}{top}};}
+\DoxyCodeLine{00043\ \}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__mandatory_ga34d35a166e1de42c26184c0f5b63b66e}{t\_stack}};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#\ define\ BOTTOM\ 0}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{structs__stack}{t\_stack}}\ \ \ \ init\_stack(\textcolor{keywordtype}{int}\ arr\_len)}
+\DoxyCodeLine{00048\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{structs__stack}{t\_stack}})\{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ .stack\_size\ =\ arr\_len,}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ .storage\ =\ malloc(arr\_len\ *\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int})),}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ .top\ =\ -\/1}
+\DoxyCodeLine{00053\ \ \ \ \ \});}
+\DoxyCodeLine{00054\ \}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/INSTRUCTIONS\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00057\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/SWAP\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{group__mandatory_gade01093c7a65184dd2e56cae7c97d076}{sa}}(\mbox{\hyperlink{structs__stack}{t\_stack}}\ *a,\ \textcolor{keywordtype}{bool}\ print\_instruction);}
+\DoxyCodeLine{00060\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{group__mandatory_ga664fd90768e3f1cb86d159e6c92eb293}{sb}}(\mbox{\hyperlink{structs__stack}{t\_stack}}\ *b,\ \textcolor{keywordtype}{bool}\ print\_instruction);}
+\DoxyCodeLine{00061\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{group__mandatory_gac0b8502f931dd87f25bf8b9035a9f097}{ss}}(\mbox{\hyperlink{structs__stack}{t\_stack}}\ *a,\ \mbox{\hyperlink{structs__stack}{t\_stack}}\ *b);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{group__mandatory_ga6c78fd754f187285e8697abd679c51be}{pa}}(\mbox{\hyperlink{structs__stack}{t\_stack}}\ *a,\ \mbox{\hyperlink{structs__stack}{t\_stack}}\ *b,\ \textcolor{keywordtype}{bool}\ print\_instruction);}
+\DoxyCodeLine{00064\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{group__mandatory_gad02515376d2ba4596ddde6cc410daec2}{pb}}(\mbox{\hyperlink{structs__stack}{t\_stack}}\ *a,\ \mbox{\hyperlink{structs__stack}{t\_stack}}\ *b,\ \textcolor{keywordtype}{bool}\ print\_instruction);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{group__mandatory_gac81321bc36187a6953b397f7e8852de9}{ra}}(\mbox{\hyperlink{structs__stack}{t\_stack}}\ *a,\ \textcolor{keywordtype}{bool}\ print\_instruction);}
+\DoxyCodeLine{00067\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{group__mandatory_ga7b4a783e6434a524445e12cf68249cea}{rb}}(\mbox{\hyperlink{structs__stack}{t\_stack}}\ *b,\ \textcolor{keywordtype}{bool}\ print\_instruction);}
+\DoxyCodeLine{00068\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{group__mandatory_ga7faaed0c9f5581e649a695f8cca3467a}{rr}}(\mbox{\hyperlink{structs__stack}{t\_stack}}\ *a,\ \mbox{\hyperlink{structs__stack}{t\_stack}}\ *b);}
+\DoxyCodeLine{00069\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{group__mandatory_ga558522c748e361a53391e4950417a9e6}{rra}}(\mbox{\hyperlink{structs__stack}{t\_stack}}\ *a,\ \textcolor{keywordtype}{bool}\ print\_instruction);}
+\DoxyCodeLine{00070\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{group__mandatory_ga297e8addc58846b9dc82e756418f28c7}{rrb}}(\mbox{\hyperlink{structs__stack}{t\_stack}}\ *b,\ \textcolor{keywordtype}{bool}\ print\_instruction);}
+\DoxyCodeLine{00071\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{group__mandatory_gab115f0986ac29fa94b89ce68b1fbbbb2}{rrr}}(\mbox{\hyperlink{structs__stack}{t\_stack}}\ *a,\ \mbox{\hyperlink{structs__stack}{t\_stack}}\ *b);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{keywordtype}{int}\ \ \ \ \ *\mbox{\hyperlink{group__mandatory_ga79e8b706913b3f2501680fe62a12d5ab}{parse\_input}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}\ **argv,\ \mbox{\hyperlink{structs__stack}{t\_stack}}\ *a);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{group__mandatory_ga8194143a797be3cf6b6fc222373e470a}{fill\_a}}(\mbox{\hyperlink{structs__stack}{t\_stack}}\ *a,\ \textcolor{keywordtype}{int}\ *int\_arr,\ \textcolor{keywordtype}{int}\ argc);}
+\DoxyCodeLine{00076\ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{group__mandatory_gae18b6fbd4a0c0f9db518aecf0bccc71a}{is\_empty}}(\mbox{\hyperlink{structs__stack}{t\_stack}}\ *stack);}
+\DoxyCodeLine{00077\ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{group__mandatory_gaa684449ba4672087b71fed4d62a85429}{is\_full}}(\mbox{\hyperlink{structs__stack}{t\_stack}}\ *stack);}
+\DoxyCodeLine{00078\ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{group__mandatory_ga2ec398c6eb6e7e0b934e79946be6d9b1}{is\_sorted}}(\mbox{\hyperlink{structs__stack}{t\_stack}}\ *stack);}
+\DoxyCodeLine{00079\ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{group__mandatory_ga9207de5961b34e36f65d2be78a2f9069}{max}}(\mbox{\hyperlink{structs__stack}{t\_stack}}\ *stack);}
+\DoxyCodeLine{00080\ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{group__mandatory_gadc10cd88931142720e9afadece702690}{min}}(\mbox{\hyperlink{structs__stack}{t\_stack}}\ *stack);}
+\DoxyCodeLine{00081\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{group__mandatory_ga65f8fef1a830219adda1e1abfb1eba8d}{push}}(\mbox{\hyperlink{structs__stack}{t\_stack}}\ *stack,\ \textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00082\ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{group__mandatory_ga5aed23db30e3cf0f572fdcfd428c9b24}{pop}}(\mbox{\hyperlink{structs__stack}{t\_stack}}\ *stack);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{group__mandatory_ga55b9c207f15ed516bdb5485998570ec9}{free\_stacks}}(\mbox{\hyperlink{structs__stack}{t\_stack}}\ *a,\ \mbox{\hyperlink{structs__stack}{t\_stack}}\ *b);}
+\DoxyCodeLine{00085\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{group__mandatory_gae072b3adc48b94098b520238ed6ff3ef}{free\_argv}}(\textcolor{keywordtype}{char}\ **argv);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{group__mandatory_ga14585a9864a7bf24a6e3fd2a28d7a452}{dead}}(\mbox{\hyperlink{structs__stack}{t\_stack}}\ *a,\ \mbox{\hyperlink{structs__stack}{t\_stack}}\ *b);}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \textcolor{keywordtype}{char}\ \ \ \ **\mbox{\hyperlink{group__mandatory_ga11d5512880f90f8151a500e47a442ebd}{handle\_argv}}(\textcolor{keywordtype}{char}\ **argv,\ \textcolor{keywordtype}{int}\ argc);}
+\DoxyCodeLine{00090\ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{group__mandatory_gad0a8c0c8175c11d8ac1b7683f8c3bc97}{func\_num\_elem}}(\textcolor{keywordtype}{char}\ **argv);}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{group__mandatory_gaf6964b64c6c92595447863aca821921d}{specific}}(\mbox{\hyperlink{structs__stack}{t\_stack}}\ *a,\ \mbox{\hyperlink{structs__stack}{t\_stack}}\ *b);}
+\DoxyCodeLine{00093\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{group__mandatory_ga2e25532d2789533034152e1004bad254}{insertion\_sort}}(\textcolor{keywordtype}{int}\ *storage,\ \textcolor{keywordtype}{int}\ chunk\_size);}
+\DoxyCodeLine{00094\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{group__mandatory_ga2bd620f02937a0db4efe5a0eab470fde}{radix\_sort}}(\mbox{\hyperlink{structs__stack}{t\_stack}}\ *a,\ \mbox{\hyperlink{structs__stack}{t\_stack}}\ *b);}
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00096\ }
+
+\end{DoxyCode}
