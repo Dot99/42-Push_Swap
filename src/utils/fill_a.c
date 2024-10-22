@@ -6,7 +6,7 @@
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 11:14:29 by gude-jes          #+#    #+#             */
-/*   Updated: 2024/10/21 12:09:04 by gude-jes         ###   ########.fr       */
+/*   Updated: 2024/10/22 09:34:27 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
  * @defgroup mandatory Mandatory
  * @{
  * @file fill_a.c
- * @brief 
+ * @brief Fill the stack A
 */
 
 #include "push_swap.h"

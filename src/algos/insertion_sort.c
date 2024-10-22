@@ -6,7 +6,7 @@
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 08:41:58 by gude-jes          #+#    #+#             */
-/*   Updated: 2024/10/21 11:40:53 by gude-jes         ###   ########.fr       */
+/*   Updated: 2024/10/22 09:35:39 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,12 @@
 
 #include "push_swap.h"
 
+/**
+ * @brief Insert Sort Algorithm
+ * 
+ * @param storage Array of int
+ * @param chunk_size The size of the array
+*/
 void	insertion_sort(int *storage, int chunk_size)
 {
 	int	i;

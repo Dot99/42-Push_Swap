@@ -6,7 +6,7 @@
 /*   By: gude-jes <gude-jes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 10:38:44 by gude-jes          #+#    #+#             */
-/*   Updated: 2024/10/21 12:11:32 by gude-jes         ###   ########.fr       */
+/*   Updated: 2024/10/22 09:34:56 by gude-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
  * @defgroup mandatory Mandatory
  * @{
  * @file parse_input.c
- * @brief 
+ * @brief Parse the input
 */
 
 #include "../includes/push_swap.h"
