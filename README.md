@@ -3,7 +3,6 @@
 <h3>Because swap_push isn't as natural<br><br><br></h3>
 </div>
 <div align="center">
-	<h2><a href="subject.pdf">Subject</h2>
 	<h2><a href="https://dot99.github.io/42-Push_Swap/">Documentation</a></h2>
 </div>
 
